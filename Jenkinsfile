@@ -11,7 +11,7 @@ pipeline {
             // Copiar la carpeta de caché de Cypress al directorio correcto
             stash(name: 'cypress-cache', includes: "${cypressCachePath}/**")
         }
-                //git 'https://github.com/javilama/TestCypressTS.git'
+                git 'https://github.com/javilama/TestCypressTS.git'
                 sh 'npm install'
                 
             }
