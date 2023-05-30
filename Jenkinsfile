@@ -6,6 +6,10 @@ pipeline {
             steps {
                 //git 'https://github.com/javilama/TestCypressTS.git'
                 sh 'npm install'
+
+            }
+            steps{
+                sh 'cypress install' 
             }
         }
         
