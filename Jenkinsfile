@@ -14,7 +14,7 @@ pipeline {
                 sh 'npm install'
         
                 //git 'https://github.com/javilama/TestCypressTS.git'
-                sh 'npm cypress install'
+               sh 'npm install cypress'
                 
            
                 
