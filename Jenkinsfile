@@ -17,10 +17,16 @@ pipeline {
             
            
         }
-        
+        stage('Configurar Xvfb') {
+        steps {
+        sh 'Xvfb :99 -screen 0 1280x1024x24 &'
+        sh 'export DISPLAY=:99'
+    }
+}
+
         stage("run tests") {
             steps {
-          
+                 sh 'export DISPLAY=:99 && npx cypress run'
                 sh 'npx cypress run --spec cypress/e2e/testpage.cy.js'
             }
         }
