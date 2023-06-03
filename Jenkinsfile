@@ -22,7 +22,12 @@ pipeline {
             
            
         }
-        
+        stage('Configurar Cypress') {
+            steps {
+                // Almacenar en caché la carpeta de Cypress
+                stash(name: 'cypress-cache', includes: '/var/lib/jenkins/.cache/Cypress/**')
+            }
+        }
         stage("run tests") {
             steps {
           
