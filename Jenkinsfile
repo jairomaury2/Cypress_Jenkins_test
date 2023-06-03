@@ -7,19 +7,19 @@ pipeline {
                 sh 'npm install cypress'
             }
         }
-        stage("Clonar repositorio") {
+        stage("install node") {
             steps {
         
                 //git 'https://github.com/javilama/TestCypressTS.git'
                 sh 'npm install'
-                
-            }
-            steps {
         
                 //git 'https://github.com/javilama/TestCypressTS.git'
                 sh 'npm cypress install'
                 
+           
+                
             }
+            
            
         }
         
