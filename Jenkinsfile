@@ -10,7 +10,7 @@ pipeline {
         stage("Clonar repositorio") {
             steps {
         
-                git 'https://github.com/javilama/TestCypressTS.git'
+                //git 'https://github.com/javilama/TestCypressTS.git'
                 sh 'npm install'
                 
             }
