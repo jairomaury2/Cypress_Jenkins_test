@@ -6,28 +6,26 @@ module.exports = defineConfig({
   reporter: 'cypress-mochawesome-reporter',
   reporterOptions: {
     "reportDir": "cypress/reports",
-    "overwrite": false,
-    "html": false,
+    "overwrite": true,
+    "html": true,
     "json": true,
+    reportPageTitle: 'test-page',
     chromeWebSecurity: false,
     embeddedScreenshots: true,
     inlineAssets: true,
     saveAllAttempts: false,
-    overwrite: false,
+    //overwrite: false,
     "experimentalMemoryManagement": true,
     "numTestsKeptInMemory": 1
   },
   
-  
-  
-  video: false,
+  video: true,
   e2e: {
     setupNodeEvents(on, config) {
-      // baseUrl: "https://app.rocketfy.mx/";
-      // implement node event listeners here
+      require('cypress-mochawesome-reporter/plugin')(on);
     },
   },
-  // URL_DEV: surge_url || 'https://pr-480-rocketfy-v4.surge.sh/'
+  
 });
 
 
