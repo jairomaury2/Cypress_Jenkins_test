@@ -25,6 +25,8 @@ pipeline {
                     sh 'npm run test:report'
                 }
             }
+           
+        }
             post {
                 always {
                     emailext subject: 'Informe de pruebas',
@@ -34,5 +36,4 @@ pipeline {
                       attachmentsPattern: 'cypress/reports/index.html'
                 }
             }
-        }
 }
