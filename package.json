@@ -7,7 +7,6 @@
   },
   "scripts": {
     "test": "cypress open",
-    "test:report": "cypress run --spec cypress/e2e/testpage.cy.js && cypress-html-reporter --output reports --template basic"
-    
+    "test:report": "cypress run --spec cypress/e2e/testpage.cy.js"
   }
 }

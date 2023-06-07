@@ -8,7 +8,7 @@ module.exports = defineConfig({
     "reportDir": "cypress/reports",
     "overwrite": true,
     "html": true,
-    "json": true,
+    "json": false,
     reportPageTitle: 'test-page',
     chromeWebSecurity: false,
     embeddedScreenshots: true,
