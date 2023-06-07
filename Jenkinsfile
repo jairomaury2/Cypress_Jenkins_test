@@ -1,7 +1,7 @@
 pipeline {
-    agent any
+        agent any
     
-    stages {
+        stages {
             stage("install node") {
                 steps {
                     sh 'npm install'
@@ -18,7 +18,6 @@ pipeline {
                     sh 'export DISPLAY=:99'
                 }
             }
-
             stage("run tests") {
                 steps {
                     sh 'export DISPLAY=:99 && npx cypress run'
@@ -36,5 +35,4 @@ pipeline {
                 }
             }
         }
-    }
 }
